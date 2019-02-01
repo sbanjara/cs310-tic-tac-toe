@@ -32,13 +32,9 @@ public class TicTacToeController {
             int row = move.getRow();
             int col = move.getCol();
             
-            if( !(row >= 0 && row < model.getWidth()) || 
-                !(col >= 0 && col < model.getWidth()) ) {
+            boolean isValidMove = model.makeMark(row, col);
+            if (isValidMove == false) {
                 view.showInputError();
-                
-            }
-            else {
-                model.makeMark(row, col);
             }
           
         }

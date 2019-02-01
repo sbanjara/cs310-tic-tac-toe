@@ -250,12 +250,13 @@ public class TicTacToeModel {
     public String toString() {
         
         StringBuilder output = new StringBuilder("  ");
-        for(int i = 0; i < width; ++i) {
-           output.append(i); 
-        }
 		
         /* Output the board contents as a string (see examples) */
 		
+		for(int i = 0; i < width; ++i) {
+           output.append(i); 
+        }
+		output.append("\n\n");
 		for(int row = 0; row < width; ++row) {
             output.append(row).append(" ");
             for(int col = 0; col < width; ++col) {
