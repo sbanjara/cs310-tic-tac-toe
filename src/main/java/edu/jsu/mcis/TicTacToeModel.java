@@ -292,8 +292,9 @@ public class TicTacToeModel {
                 String a = x.toString();
                 output.append(a);
             }
-            output.append("\n");
+            output.append("\n\n");
         }
+		output.append("\n");
         
         return output.toString();
         
