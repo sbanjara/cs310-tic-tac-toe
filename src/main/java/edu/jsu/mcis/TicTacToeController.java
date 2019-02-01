@@ -30,9 +30,9 @@ public class TicTacToeController {
             view.showBoard(model.toString());
             TicTacToeMove move = view.getNextMove(model.isXTurn());
             int row = move.getRow();
-            int col = move.getCol();
-            
+            int col = move.getCol(); 
             boolean isValidMove = model.makeMark(row, col);
+			
             if (isValidMove == false) {
                 view.showInputError();
             }

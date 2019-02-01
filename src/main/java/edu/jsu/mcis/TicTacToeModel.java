@@ -192,7 +192,7 @@ public class TicTacToeModel {
                 
         }
         return isMarkWin;
-
+		
     }
 	
     private boolean isTie() {
@@ -200,8 +200,7 @@ public class TicTacToeModel {
         /* Check the squares of the board to see if the game is a tie */
 		
 		boolean isTie = false;
-        boolean emptySquares = false;
-        
+        boolean emptySquares = false;    
         for(int row = 0; row < width; ++row) {
             for(int col = 0; col < width; ++col) {
                 if( isSquareMarked(row, col) == false ) {
@@ -210,12 +209,9 @@ public class TicTacToeModel {
                 }
             }
         }
-         
         if( (isMarkWin(Mark.X) == false) && (isMarkWin(Mark.O) == false) && 
             (emptySquares == false) ) {
-            
-            isTie = true;
-            
+            isTie = true;		 
         }
         
         return isTie;
@@ -264,10 +260,10 @@ public class TicTacToeModel {
                 String a = x.toString();
                 output.append(a);
             }
-            output.append("\n");
+			if(row < width-1)
+				output.append("\n");
         }
-		output.append("\n");
-        
+		
         return output.toString();
         
     }
