@@ -1,7 +1,7 @@
 package edu.jsu.mcis;
 
-public class TicTacToeController {
-
+public class TicTacToeController implements ActionListener{
+    
     private final TicTacToeModel model;
     private final TicTacToeView view;
     
@@ -12,39 +12,53 @@ public class TicTacToeController {
         /* Initialize model, view, and width */
 
         model = new TicTacToeModel(width);
-        view = new TicTacToeView();
+        view = new TicTacToeView(this, width);
         
     }
-
-    public void start() {
     
-        /* MAIN LOOP (repeats until game is over) */
-
-        /* Display the board using the View's "showBoard()", then use
-           "getNextMove()" to get the next move from the player.  Enter
-           the move (using the Model's "makeMark()", or display an error
-           using the View's "showInputError()" if the move is invalid. */
-
-		while (model.isGameover() == false) {
-			
-            view.showBoard(model.toString());
-            TicTacToeMove move = view.getNextMove(model.isXTurn());
-            int row = move.getRow();
-            int col = move.getCol(); 
-            boolean isValidMove = model.makeMark(row, col);
-			
-            if (isValidMove == false) {
-                view.showInputError();
-            }
-          
-        }
-        
-        /* After the game is over, show the final board and the winner */
-
-        view.showBoard(model.toString());
-
-        view.showResult(model.getResult().toString());
-        
+    public String getMarkAsString(int row, int col) {        
+        return (model.getMark(row, col).toString());        
+    }
+    
+    public TicTacToeView getView() {        
+        return view;        
     }
 
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        if( e.getSource() instanceof JButton) {
+           
+            JButton button = (JButton) (e.getSource());
+            String name = button.getName();
+            int row = Integer.parseInt(name.substring(6, 7));
+            int col = Integer.parseInt(name.substring(7));
+            
+            boolean markMade = model.makeMark(row, col);
+            
+            if(markMade) {
+                
+                view.updateSquares();
+
+                String result = model.getResult().toString();
+                if( result.equals("X")) {
+                    view.showResult("X");
+                }
+                else if( result.equals("O")) {
+                    view.showResult("O");
+                }
+                else if( result.equals("TIE")) {
+                    view.showResult("TIE");
+                }
+                if(model.isGameover()) {
+                    view.disableSquares();
+                }
+                
+            }
+			
+        }
+		
+    }
+       
 }
