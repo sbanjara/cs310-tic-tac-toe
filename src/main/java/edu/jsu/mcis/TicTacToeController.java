@@ -38,13 +38,13 @@ public class TicTacToeController implements ActionListener{
             String name = button.getName();
             int row = Integer.parseInt(name.substring(6, 7));
             int col = Integer.parseInt(name.substring(7));
-            
             boolean markMade = model.makeMark(row, col);
             
             if(markMade) {
                 
                 view.updateSquares();
-
+				view.clearResult();
+				
                 String result = model.getResult().toString();
                 if( result.equals("X")) {
                     view.showResult("X");
@@ -58,6 +58,22 @@ public class TicTacToeController implements ActionListener{
                 if(model.isGameover()) {
                     view.disableSquares();
                 }
+				/*
+				if( model.getResult().equals(model.getResult().X) ) {
+                    view.showResult( (model.getResult().X).toString() );
+                }
+                else if(  model.getResult().equals(model.getResult().O) ) {
+                    view.showResult( (model.getResult().O).toString() );
+                }
+                else if(  model.getResult().equals(model.getResult().TIE) ) {
+                    view.showResult( (model.getResult().TIE).toString() );
+                }
+                else if(  model.getResult().equals(model.getResult().NONE) ) {
+                    view.clearResult();
+                }
+                if(model.isGameover()) {
+                    view.disableSquares();
+                }*/
                 
             }
 			

@@ -127,7 +127,6 @@ public class TicTacToeModel {
         if( (getMark(row, col) == Mark.X) || (getMark(row, col) == Mark.O) ) {
                 isSquareMarked = true;
         }
-		
         return isSquareMarked;
             
     }
@@ -192,6 +191,7 @@ public class TicTacToeModel {
             mark2 = "";
                 
         }
+		
         return isMarkWin;
 		
     }
