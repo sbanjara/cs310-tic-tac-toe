@@ -14,7 +14,7 @@ public class TicTacToeModel {
         
         X("X"), 
         O("O"), 
-        EMPTY("-");
+        EMPTY(" ");
 
         private String message;
         
@@ -243,12 +243,12 @@ public class TicTacToeModel {
         
     }
     
-    @Override
+    /*@Override
     public String toString() {
         
         StringBuilder output = new StringBuilder("  ");
 		
-        /* Output the board contents as a string (see examples) */
+        /* Output the board contents as a string (see examples)
 		
 		for(int i = 0; i < width; ++i) {
            output.append(i); 
@@ -267,6 +267,6 @@ public class TicTacToeModel {
 		
         return output.toString();
         
-    }
+    } */
     
 }
