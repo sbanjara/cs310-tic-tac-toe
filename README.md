@@ -1,7 +1,7 @@
 #  TIC-TAC-TOE
 
 ## Description
-   This project is an implementation of tic-tac-toe game. It was one of the projects of my Software Engineering I class. 
+   This project is an implementation of tic-tac-toe game. It was one of the projects of my **Software Engineering I** class. 
    It has two branches,
    
    1. master 
