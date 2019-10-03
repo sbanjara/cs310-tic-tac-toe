@@ -44,9 +44,9 @@ public class TicTacToeView extends JPanel {
         
     public void updateSquares() {
 
-        /* Refresh the GUI with updated data from the Model (via the Controller) */
+        /* Refreshs the GUI with updated data from the Model (via the Controller) */
 
-		for(int row = 0; row < board.length; ++row) {
+	for(int row = 0; row < board.length; ++row) {
             for(int col = 0; col < board.length; ++col) {
                 String mark = controller.getMarkAsString(row, col);
                 board[row][col].setText(mark); 
@@ -57,7 +57,7 @@ public class TicTacToeView extends JPanel {
     
     public void disableSquares() {
 
-        /* Disable buttons (to disallow input after game is over) */
+        /* Disables buttons (to disallow input after game is over) */
     
         for(int row = 0; row < board.length; ++row) {
             for(int col = 0; col < board.length; ++col) {

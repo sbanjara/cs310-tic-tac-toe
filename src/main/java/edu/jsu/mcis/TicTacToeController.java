@@ -13,7 +13,7 @@ public class TicTacToeController implements ActionListener{
 
     public TicTacToeController(int width) {
         
-        /* Initialize model, view, and width */
+        /* Initializes model, view, and width */
 
         model = new TicTacToeModel(width);
         view = new TicTacToeView(this, width);
@@ -54,9 +54,9 @@ public class TicTacToeController implements ActionListener{
                 else if( result.equals("TIE")) {
                     view.showResult("TIE");
                 }
-				else if( result.equals("NONE") ) {
-					view.clearResult();
-				}
+                else if( result.equals("NONE") ) {
+                    view.clearResult();
+                }
                 if(model.isGameover()) {
                     view.disableSquares();
                 }
