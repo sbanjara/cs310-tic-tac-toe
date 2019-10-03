@@ -73,26 +73,29 @@ public class TicTacToeModel {
         
         board = new Mark[width][width];
 
-        /* Initialize board by filling every square with empty marks */
+        /* Initializes board by filling every square with empty marks */
 		
-		for(int row = 0; row < width; ++row) {
-			for(int col = 0; col < width; ++col) {
-				board[row][col] = Mark.EMPTY;
-			}
-		}
+        for(int row = 0; row < width; ++row) {
+            
+            for(int col = 0; col < width; ++col) {
+                
+                board[row][col] = Mark.EMPTY;
+            }
+        }
         
     }
 	
     public boolean makeMark(int row, int col) {
         
-        /* Use "isValidSquare()" to check if the specified location is in range,
-           and use "isSquareMarked()" to see if the square is empty!  If the
-           specified location is valid, make a mark for the current player, then
-           toggle "xTurn" from true to false (or vice-versa) to switch to the
-           other player before returning TRUE.  Otherwise, return FALSE. */
+        /* Uses "isValidSquare()" to check if the specified location is in range,
+           and uses "isSquareMarked()" to see if the square is empty!  If the
+           specified location is valid, makes a mark for the current player, then
+           toggles "xTurn" from true to false (or vice-versa) to switch to the
+           other player before returning TRUE.  Otherwise, returns FALSE. */
 		
-		boolean markMade = false;
+	boolean markMade = false;
         if( (isValidSquare(row, col)) && (!isSquareMarked(row, col)) ) {
+            
             if(xTurn) {
                 board[row][col] = Mark.X;
                 xTurn = false;
@@ -102,6 +105,7 @@ public class TicTacToeModel {
                 xTurn = true;
             }
             markMade = true;
+            
         }
         return markMade;
 		
@@ -109,9 +113,9 @@ public class TicTacToeModel {
 	
     private boolean isValidSquare(int row, int col) {
         
-        /* Return TRUE if the specified location is within the bounds of the board */
+        /* Returns TRUE if the specified location is within the bounds of the board */
 		
-		boolean isValidSquare = false;
+        boolean isValidSquare = false;
         if( (row >= 0 && row < width) && (col >= 0 && col < width) ) {
                 isValidSquare = true;
         }
@@ -121,9 +125,9 @@ public class TicTacToeModel {
 	
     private boolean isSquareMarked(int row, int col) {
         
-        /* Return TRUE if the square at specified location is marked */
+        /* Returns TRUE if the square at specified location is marked */
 		
-		boolean isSquareMarked = false;
+	boolean isSquareMarked = false;
         if( (getMark(row, col) == Mark.X) || (getMark(row, col) == Mark.O) ) {
                 isSquareMarked = true;
         }
@@ -133,19 +137,19 @@ public class TicTacToeModel {
 	
     public Mark getMark(int row, int col) {
         
-        /* Return the mark from the square at the specified location */
+        /* Returns the mark from the square at the specified location */
 		
-		return board[row][col];
+        return board[row][col];
             
     }
 	
     public Result getResult() {
         
-        /* Call "isMarkWin()" to see if X or O is the winner, if the game is a
-           TIE, or if the game is not over.  Return the corresponding Result
+        /* Calls "isMarkWin()" to see if X or O is the winner, if the game is a
+           TIE, or if the game is not over.  Returns the corresponding Result
            value */
 		
-		if(isMarkWin(Mark.X))
+	if(isMarkWin(Mark.X))
             return Result.X;
         else if(isMarkWin(Mark.O))
             return Result.O;
@@ -158,18 +162,16 @@ public class TicTacToeModel {
 	
     private boolean isMarkWin(Mark mark) {
         
-        /* Check the squares of the board to see if the specified mark is the
+        /* Checks the squares of the board to see if the specified mark is the
            winner */
 		
-		boolean isMarkWin = false;
+	boolean isMarkWin = false;
         String userMarks = "";
         int count = width-1;
         String mark1 = "", mark2 = "", mark3 = "",mark4 = "";
         
-        for(int j = 0; j < width; ++j) {
+        for(int j = 0; j < width; ++j)
             userMarks += mark;
-            
-        }
         
         for(int row = 0; row < width; ++row) {
             for(int col = 0; col < width; ++col) {
@@ -197,9 +199,9 @@ public class TicTacToeModel {
 	
     private boolean isTie() {
         
-        /* Check the squares of the board to see if the game is a tie */
+        /* Checks the squares of the board to see if the game is a tie */
 		
-		boolean isTie = false;
+        boolean isTie = false;
         boolean emptySquares = false;    
         for(int row = 0; row < width; ++row) {
             for(int col = 0; col < width; ++col) {
@@ -220,7 +222,7 @@ public class TicTacToeModel {
 
     public boolean isGameover() {
         
-        /* Return TRUE if the game is over */
+        /* Returns TRUE if the game is over */
         
         return (Result.NONE != getResult());
         
@@ -247,21 +249,25 @@ public class TicTacToeModel {
         
         StringBuilder output = new StringBuilder("  ");
 		
-        /* Output the board contents as a string (see examples) */
+        /* Outputs the board contents as a string (see examples) */
 		
-		for(int i = 0; i < width; ++i) {
+	for(int i = 0; i < width; ++i) {
            output.append(i); 
         }
-		output.append("\n\n");
-		for(int row = 0; row < width; ++row) {
+	output.append("\n\n");
+        
+	for(int row = 0; row < width; ++row) {
+            
             output.append(row).append(" ");
+            
             for(int col = 0; col < width; ++col) {
                 Mark x = board[row][col];
                 String a = x.toString();
                 output.append(a);
             }
-			if(row < width-1)
-				output.append("\n");
+            if(row < width-1)
+		output.append("\n");
+            
         }
 		
         return output.toString();
