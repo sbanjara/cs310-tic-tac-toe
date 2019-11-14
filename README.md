@@ -8,32 +8,33 @@
    2. GUIImplementation 
    
    The master branch implements the game in a console. The user can choose the size of a board by providing the arguments in the command prompt (for instance, cs310-tic-tac-toe.jar 4). The default board size for the game is 3x3 unless specified by the user. The first move is always the **X** followed by **O**. The game continues until one player wins or there is a **Tie**. This game in the console will look like below if a default size is applied,
-                                                            0 1 2
+   
+                             Board Initially:               0 1 2
                                                           0 - - -
                                                           1 - - -
                                                           2 - - -
                                                           
-                             i) After Player 1 (X) move     0 1 2
+                           i) After Player 1's (X) move     0 1 2
                                                           0 - - -
                                                           1 - X -
                                                           2 - - -
                                                           
-                            ii) After Player 2 (O) move     0 1 2
+                          ii) After Player 2's (O) move     0 1 2
                                                           0 - - -
                                                           1 - X -
                                                           2 - - O
                                                           
-                           iii) After Player 1 (X) move     0 1 2
+                         iii) After Player 1's (X) move     0 1 2
                                                           0 - X -
                                                           1 - X -
                                                           2 - - O
                                                           
-                            iv) After Player 1 (O) move     0 1 2
+                          iv) After Player 2's (O) move     0 1 2
                                                           0 - X -
                                                           1 - X O
                                                           2 - - O
                                                           
-                             v) After Player 1 (O) move     0 1 2
+                           v) After Player 1's (X) move     0 1 2
                                                           0 - X -
                                                           1 - X O
                                                           2 - X O
