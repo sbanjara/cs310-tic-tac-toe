@@ -2,6 +2,7 @@
 
 ## Description
    This project is an implementation of a tic-tac-toe game. It was one of the projects of my **Software Engineering I** class. 
+   It is written in java 8 and implemented using Model View Controller desgin pattern.
    It has two branches,
    
    1. **master 
@@ -41,9 +42,9 @@
                              
                                                       Remark: X wins!!!
                                                       
-   The **"GUIImplementation"** branch implements the game in a GUI form. It will display the board with 3x3 dimensions unless specified by the user when initializing the controller class. The user will make a move (make a mark) via a button click - the first move is always **X** move.                  
+   The **"GUIImplementation"** branch implements the game in a GUI. It will display the board with 3x3 dimensions unless specified by the user when initializing the controller class. The user will make a move via a button click - the first move is always **X** move followed by **O**. The GUI implementation looks as below,                 
    
-                                  ![picture](tic-tac1.PNG)
+  ![picture](tic-tac1.PNG)
                                
     
     
@@ -51,7 +52,7 @@
     
     
     
-  ![picture](tic-tac2.PNG)
+ ![picture](tic-tac2.PNG)
                                     
    
    
