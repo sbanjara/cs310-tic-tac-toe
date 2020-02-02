@@ -46,14 +46,7 @@
                                        ![picture](tic-tac1.PNG)
                                        
                                        
-                                       ![picture](tic-tac2.PNG)
-                                       
-                                       
-                                       ![picture](tic-tac3.PNG)
-                                       
-                                       
-                                       ![picture](tic-tac4.PNG)
-   
+                                     
    
    
    
