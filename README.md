@@ -41,10 +41,36 @@
                              
                                                       Remark: X wins!!!
                                                       
-   The **"GUIImplementation"** branch implements the game in a GUI form. It will display the board with 3x3 dimensions unless specified by the user when initializing the controller class. The user will make a move (make a mark) via a button click - the first move is always **X** move.                  ![picture](tic-tac1.PNG)
-                                    ![picture](tic-tac2.PNG)
-                                    ![picture](tic-tac3.PNG)
-                                    ![picture](tic-tac4.PNG)
+   The **"GUIImplementation"** branch implements the game in a GUI form. It will display the board with 3x3 dimensions unless specified by the user when initializing the controller class. The user will make a move (make a mark) via a button click - the first move is always **X** move.                  
+   
+  ![picture](tic-tac1.PNG)
+                               
+    
+    
+    
+    
+    
+    
+  ![picture](tic-tac2.PNG)
+                                    
+   
+   
+   
+   
+   
+   
+                                    
+                                    
+  ![picture](tic-tac3.PNG)
+                                   
+                                   
+                                   
+          
+          
+          
+          
+                                   
+  ![picture](tic-tac4.PNG)
    
                                        
                                        
