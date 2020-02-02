@@ -82,7 +82,7 @@
   
   
 ## Running this Program
-   The necessary tools to run this program are JDK 1.8, Netbeans, and Gradle. Once you have all these tools, you can clone the repository in your workstation by running this command (git clone https://github.com/sbanjara/cs310-tic-tac-toe). If you want to clone it in the desktop, please make sure to change the directory to desktop (cd desktop) and then clone it (git clone https://github.com/sbanjara/cs310-tic-tac-toe).
+   The necessary tools to run this program are JDK 1.8, Netbeans, and Gradle. Once you have these tools ready, you can clone the repository in your workstation by running this command at the command prompt (**git clone https://github.com/sbanjara/cs310-tic-tac-toe**). If you want to clone it in the desktop, please make sure to change the directory to desktop (by running **cd desktop** command in the command prompt) and then clone it (**git clone https://github.com/sbanjara/cs310-tic-tac-toe**).
    
                                        
                                        
